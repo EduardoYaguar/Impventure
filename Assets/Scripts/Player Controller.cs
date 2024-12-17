@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     public float jumpImpulse = 5.5f;
     public GameObject ImpFireballPrefab;
     private float lastFireball = 3f;
+
+    private float fireballCooldown = 0.25f; // Tiempo base entre disparos
+    private bool isFireRateBoosted = false; // Indica si el disparo está potenciado
+
     public float currentMoveSpeed 
     {
         get {
@@ -138,7 +142,31 @@ public class PlayerController : MonoBehaviour
 
             Invoke("RestartScene", 0.5f);
         }
+        if (collision.CompareTag("Enemy"))
+        {
+            enabled = false;
+
+            Invoke("RestartScene", 0.5f);
+        }else if (collision.CompareTag("Cherry"))
+        {
+            // Activar el efecto de velocidad de disparo aumentada
+            if (!isFireRateBoosted)
+            {
+                StartCoroutine(DoubleFireRateForSeconds(10f));
+            }
+            Destroy(collision.gameObject); // Opcional: destruir el objeto "Cherry"
+        }else if (collision.CompareTag("Door"))
+        {
+            ChangeScene(); // Cambiar a una nueva escena
+        }
     }
+
+    private void ChangeScene()
+    {
+        // Cambia el nombre "NextSceneName" por el nombre de la escena a la que quieres cambiar
+        SceneManager.LoadScene(1);
+    }
+
     private void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -162,5 +190,13 @@ public class PlayerController : MonoBehaviour
             
 
         }
+    }
+    private System.Collections.IEnumerator DoubleFireRateForSeconds(float duration)
+    {
+        isFireRateBoosted = true;
+        fireballCooldown /= 2; // Duplicar la velocidad de disparo
+        yield return new WaitForSeconds(duration);
+        fireballCooldown *= 2; // Restaurar la velocidad normal
+        isFireRateBoosted = false;
     }
 }

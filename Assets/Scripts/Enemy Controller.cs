@@ -19,6 +19,7 @@ public class EnemyController : MonoBehaviour
             return;
         }else if(collision.CompareTag("imp_fireball")){
             Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
      
     }
