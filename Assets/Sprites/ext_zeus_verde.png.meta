@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6815666e5c84bae409c70b5e5643e582
+guid: 6c494b129fe97014f9af2c6c5b03cc23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3775638147544300894
-    second: walk-3_0
+      213: 3259340876981139327
+    second: ext_zeus_verde_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk-3_0
+      name: ext_zeus_verde_0
       rect:
         serializedVersion: 2
-        x: 13
+        x: 223
         y: 0
-        width: 23
-        height: 30
+        width: 353
+        height: 800
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5dbac814e2c56430800000000000000
-      internalID: 3775638147544300894
+      spriteID: f77fe5642418b3d20800000000000000
+      internalID: 3259340876981139327
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      walk-3_0: 3775638147544300894
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

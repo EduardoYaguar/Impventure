@@ -11,11 +11,12 @@ TagManager:
   - Ground
   - Enemy
   - MapLimit
+  - Door
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
   - 
